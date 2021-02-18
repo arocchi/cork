@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cork</name>
+  <version>1.0</version>
+  <description>Welcome to the Cork Boolean/CSG library. Cork is designed to support Boolean operations between triangle meshes.</description>
+  <maintainer email="rocchi.alessio@gmail.com">Alessio Rocchi</maintainer>
+  <license>LGPL</license>
+
+  <url type="bugtracker">https://github.com/gilbo/cork/issues</url>
+  <url type="repository">https://github.com/gilbo/cork</url>
+
+  <author>Gilbert Bernstein</author>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <build_depend>cmake</build_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
