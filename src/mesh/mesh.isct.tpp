@@ -1048,7 +1048,7 @@ void Mesh<VertData,TriData>::IsctProblem::reset()
 template<class VertData, class TriData>
 void Mesh<VertData,TriData>::IsctProblem::findIntersections()
 {
-    int nTrys = 5;
+    int nTrys = 10;
     perturbPositions(); // always perturb for safety...
     while(nTrys > 0) {
         if(!tryToFindIntersections()) {
@@ -1060,8 +1060,7 @@ void Mesh<VertData,TriData>::IsctProblem::findIntersections()
         }
     }
     if(nTrys <= 0) {
-        CORK_ERROR("Ran out of tries to perturb the mesh");
-        exit(1);
+        throw std::runtime_error("Ran out of tries to perturb the mesh");
     }
     
     // ok all points put together,
